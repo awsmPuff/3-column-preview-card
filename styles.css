@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray-bg-headings-btn: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--very-light-gray-bg-headings-btn);
+}
+
+.container {
+    display: flex;
+    width: 920px;
+    height: 500px;
+    border-radius: 8px;
+}
+
+.container > div {
+    padding: 48px;
+    position: relative;
+}
+
+.con-1 {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.con-2 {
+    background-color: var(--dark-cyan);
+}
+.con-3 {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.container > div img {
+    width: 64px;
+    height: 40px;
+}
+
+.container > div h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+    margin: 35px 0 25px;
+    color: var(--very-light-gray-bg-headings-btn);
+}
+
+.container > div p {
+    line-height: 25px;
+    color: var(--transparent-white-paragraphs);
+}
+
+.container > div button {
+    font-family: inherit;
+    width: 146px;
+    height: 48px;
+    border-radius: 25px;
+    border: none;
+    position: absolute;
+    bottom: 48px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.container > div button:hover {
+    border: solid 2px white;
+    background-color: transparent;
+    color: white;
+}
+
+.con-1 button {
+    color: var(--bright-orange);
+}
+.con-2 button {
+    color: var(--dark-cyan);
+}
+.con-2 button {
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        height: 1326px;
+    }
+    .container > div {
+        height: 442px;
+    }
+    .con-1 {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 8px;
+    }
+    .con-3 {
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0;
+    }
+}
